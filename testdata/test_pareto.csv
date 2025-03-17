@@ -1,0 +1,14 @@
+Key,Value1,Value2,ValueN
+x_title,"Income Inequality",,
+x_text,"Top 3 states account for 80% #Economy",,
+x_sponsor,"",,
+x_source,"Census",,
+chart_type,pareto,,
+image_path,,,
+title,"Income Distribution by State",,
+chart_alt,"Pareto chart of income distribution: CA 50M, NY 30M, TX 20M",,
+style,"bgcolor=#f0f0f0","color=#2e8b57",,
++++
+---
+State,CA,NY,TX
+Income,50,30,20

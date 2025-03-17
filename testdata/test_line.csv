@@ -1,0 +1,14 @@
+Key,Value1,Value2,ValueN
+x_title,"GDP Growth Trend",,
+x_text,"Steady rise since 2020 #GDP",,
+x_sponsor,"",,
+x_source,"FRED",,
+chart_type,line,,
+image_path,,,
+title,"US GDP Growth 2020-2023",,
+chart_alt,"Line chart of US GDP growth: 2020 -2.1%, 2021 5.9%, 2022 2.1%, 2023 2.5%",,
+style,"bgcolor=#fafafa","color=#8a2be2",,
++++
+---
+Year,2020,2021,2022,2023
+Growth,-2.1,5.9,2.1,2.5

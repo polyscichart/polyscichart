@@ -1,0 +1,17 @@
+Key,Value1,Value2,ValueN
+x_title,"Stock Index 2024",,
+x_text,"S&P 500 weekly #Finance",,
+x_sponsor,"",,
+x_source,"Yahoo Finance",,
+chart_type,candlestick,,
+image_path,,,
+title,"S&P 500 Weekly 2024",,
+chart_alt,"Candlestick chart of S&P 500: Jan open 4700, high 4800, low 4650, close 4750",,
+style,"bgcolor=#fffacd","color=#32cd32",,
++++
+---
+Week,Jan,Feb
+Open,4700,4750
+High,4800,4850
+Low,4650,4700
+Close,4750,4820

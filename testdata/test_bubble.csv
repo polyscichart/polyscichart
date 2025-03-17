@@ -1,0 +1,15 @@
+Key,Value1,Value2,ValueN
+x_title,"Population vs GDP",,
+x_text,"Size reflects population #Stats",,
+x_sponsor,"xAI",,
+x_source,"World Bank",,
+chart_type,bubble,,
+image_path,,,
+title,"Population vs GDP 2023",,
+chart_alt,"Bubble chart of population vs GDP: US 330M/25T, China 1400M/18T, India 1400M/3T",,
+style,"bgcolor=#f8f8ff","color=#ff4500",,
++++
+---
+Country,US,China,India
+Population,330,1400,1400
+GDP,25,18,3

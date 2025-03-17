@@ -1,0 +1,14 @@
+Key,Value1,Value2,ValueN
+x_title,"Global Trade Share",,
+x_text,"US leads, China follows #Trade",,
+x_sponsor,"xAI",,
+x_source,"WTO",,
+chart_type,pie,,
+image_path,,,
+title,"Global Trade Share 2023",,
+chart_alt,"Pie chart of global trade shares in 2023: US 25%, China 20%, EU 15%",,
+style,"bgcolor=#ffffff","color=#ff6347",,
++++
+---
+Country,US,China,EU
+Share,25,20,15

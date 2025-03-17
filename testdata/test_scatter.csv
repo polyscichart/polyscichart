@@ -1,0 +1,15 @@
+Key,Value1,Value2,ValueN
+x_title,"Trade vs Growth",,
+x_text,"Correlation in 2023 #Trade",,
+x_sponsor,"",,
+x_source,"IMF",,
+chart_type,scatter,,
+image_path,,,
+title,"Trade Volume vs GDP Growth",,
+chart_alt,"Scatter chart of trade volume vs GDP growth: US 2.5T/2.5%, Japan 1T/1.8%",,
+style,"bgcolor=#f5f5f5","color=#20b2aa",,
++++
+---
+Country,US,Japan
+Trade,2.5,1
+Growth,2.5,1.8
