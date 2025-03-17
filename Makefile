@@ -3,5 +3,8 @@ help:
 	@echo "polyscichart"
 
 mockx:
-	go run ./cmd/mockx
+	go install ./cmd/mockx
 
+
+checkcsv:
+	go install ./cmd/checkcsv
