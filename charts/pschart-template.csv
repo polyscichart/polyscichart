@@ -1,0 +1,20 @@
+Key,Value1,Value2,Value3
+x_title,"",,
+x_text,"",,
+x_sponsor,"",,
+x_source,"",,
+chart_type,"",,
+image_path,,,
+title,"",,
+chart_alt,"",,
+style,"",,
++++
+x_post_id,,,
+x_post_url,,,
+x_media_id,,,
+x_created_at,,,
+---
+Label,Style,Value 1,Value 2,Value 3
+Label A,"color=red",10,,,
+Label B,"color=blue",20,,,
+Label C,"color=green",30,,,

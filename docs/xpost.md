@@ -23,6 +23,8 @@ URL length.
 - Example: #Economics #Politics #DataViz (29 characters).
 - Usage: Add 1-3 relevant hashtags to reach broader X audiences interested in socio-economic or political topics. 
 Keep them concise to fit within 280 characters.
+- Always add a "#polyscichart" hashtag to enhance brand visibility.
+
 
 ## Mentions:
 - Purpose: Tag sponsors, data sources, or influencers for visibility or partnerships.

@@ -28,12 +28,12 @@ func generatePSCPostJSON(pscPost datastore.PSCPost) error {
 	}
 
 	// Write the JSON data to a file
-	err = os.WriteFile("pscpost.json", jsonData, 0644)
+	err = os.WriteFile("test-pscpost.json", jsonData, 0644)
 	if err != nil {
 		return fmt.Errorf("error writing JSON to file: %w", err)
 	}
 
-	fmt.Println("pscpost.json created successfully.")
+	fmt.Println("test-pscpost.json created successfully.")
 	return nil
 }
 
@@ -69,7 +69,7 @@ func generateBarChartPNGFromPSCPost(data datastore.BarChartData) {
 	}
 
 	// Write to a file
-	f, err := os.Create("bar_chart.png")
+	f, err := os.Create("test-bar_chart.png")
 	if err != nil {
 		fmt.Println("Error creating file:", err)
 		return
@@ -82,7 +82,7 @@ func generateBarChartPNGFromPSCPost(data datastore.BarChartData) {
 		return
 	}
 
-	fmt.Println("bar_chart.png created successfully.")
+	fmt.Println("test-bar_chart.png created successfully.")
 }
 
 func generateDataAndChart() {
@@ -110,51 +110,4 @@ func generateDataAndChart() {
 
 	// Generate a PNG chart using go-chart
 	generateBarChartPNGFromPSCPost(barChartData)
-}
-func generateBarChartPNG(data datastore.BarChartData) {
-	graph := chart.BarChart{
-		Title: "GDP by Country (Trillions USD)",
-		TitleStyle: chart.Style{
-			FontSize:  16,
-			FontColor: drawing.ColorBlack,
-		},
-		XAxis: chart.Style{
-			Show: true,
-		},
-		YAxis: chart.YAxis{
-			Style: chart.Style{
-				Show: true,
-			},
-		},
-		Bars: []chart.Value{},
-	}
-
-	for i := 0; i < len(data.Labels); i++ {
-		graph.Bars = append(graph.Bars, chart.Value{
-			Value: float64(data.Values[i]),
-			Label: data.Labels[i],
-		})
-	}
-
-	graph.Background = chart.Style{
-		Padding: chart.Box{
-			Top: 20,
-		},
-	}
-
-	// Write to a file
-	f, err := os.Create("bar_chart.png")
-	if err != nil {
-		fmt.Println("Error creating file:", err)
-		return
-	}
-	defer f.Close()
-
-	err = graph.Render(chart.PNG, f)
-	if err != nil {
-		fmt.Println("Error rendering chart:", err)
-		return
-	}
-
-	fmt.Println("bar_chart.png created successfully.")
 }
