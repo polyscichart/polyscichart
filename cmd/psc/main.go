@@ -9,7 +9,7 @@ import (
 	"github.com/wcharczuk/go-chart"
 	"github.com/wcharczuk/go-chart/drawing"
 
-	"github.com/polyscichart/polyscichart/datastore" // Replace with your actual import path
+	"github.com/polyscichart/polyscichart/chartdata" // Replace with your actual import path
 )
 
 var command2Args = map[string]int{
@@ -31,7 +31,7 @@ func main() {
 
 	switch cmd {
 	case "chart":
-		pscPost, err := datastore.FromFile(os.Args[2])
+		pscPost, err := chartdata.FromFile(os.Args[2])
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "Error reading datastore file: %v\n", err)
 			return
@@ -54,7 +54,7 @@ func checkArgs(cmd string) bool {
 	return false
 }
 
-func generatePSCPostJSON(pscPost datastore.PSCPost) error {
+func generatePSCPostJSON(pscPost chartdata.PSCPost) error {
 	// Marshal the PSCPost data to JSON
 	jsonData, err := json.MarshalIndent(pscPost, "", "  ")
 	if err != nil {
@@ -71,13 +71,13 @@ func generatePSCPostJSON(pscPost datastore.PSCPost) error {
 	return nil
 }
 
-func generateBarChartPNGFromPSCPost(data datastore.BarChartData) {
-	pscPost, ok := data.(datastore.PSCPost)
+func generateBarChartPNGFromPSCPost(data chartdata.BarChartData) {
+	pscPost, ok := data.(chartdata.PSCPost)
 	if !ok {
 		fmt.Println("Error: Invalid data type. Expected PSCPost")
 		return
 	}
-	chartData, ok := pscPost.ChartData.(datastore.ChartBar
+	chartData, ok := pscPost.ChartData.(chartdata.ChartBar
 	Or
 	PIe )
 
@@ -130,13 +130,13 @@ func generateBarChartPNGFromPSCPost(data datastore.BarChartData) {
 
 func generateDataAndChart() {
 	// Sample bar chart data
-	barChartData := datastore.BarChartData{
+	barChartData := chartdata.BarChartData{
 		Labels: []string{"US", "China", "Ukraine", "EU", "Russia"},
 		Values: []float64{23.0, 17.7, 0.2, 17.1, 1.7}, // GDP in Trillions (made up numbers
 	}
 
 	// Create a PSCPost with the bar chart data
-	pscPost := datastore.PSCPost{
+	pscPost := chartdata.PSCPost{
 		ChartPostID: "20240701-001",
 		XPostURL:    "https://x.com/example", // Placeholder
 		ChartData:   barChartData,
@@ -154,7 +154,7 @@ func generateDataAndChart() {
 	// Generate a PNG chart using go-chart
 	generateBarChartPNGFromPSCPost(barChartData)
 }
-func generateBarChartPNG(data datastore.BarChartData) {
+func generateBarChartPNG(data chartdata.BarChartData) {
 	graph := chart.BarChart{
 		Title: "GDP by Country (Trillions USD)",
 		TitleStyle: chart.Style{

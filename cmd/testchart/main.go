@@ -9,7 +9,7 @@ import (
 	"github.com/wcharczuk/go-chart"
 	"github.com/wcharczuk/go-chart/drawing"
 
-	"github.com/polyscichart/polyscichart/datastore" // Replace with your actual import path
+	"github.com/polyscichart/polyscichart/chartdata" // Replace with your actual import path
 )
 
 func main() {
@@ -20,7 +20,7 @@ func main() {
 	}
 }
 
-func generatePSCPostJSON(pscPost datastore.PSCPost) error {
+func generatePSCPostJSON(pscPost chartdata.PSCPost) error {
 	// Marshal the PSCPost data to JSON
 	jsonData, err := json.MarshalIndent(pscPost, "", "  ")
 	if err != nil {
@@ -37,7 +37,7 @@ func generatePSCPostJSON(pscPost datastore.PSCPost) error {
 	return nil
 }
 
-func generateBarChartPNGFromPSCPost(data datastore.BarChartData) {
+func generateBarChartPNGFromPSCPost(data chartdata.BarChartData) {
 	graph := chart.BarChart{
 		Title: "GDP by Country (Trillions USD)",
 		TitleStyle: chart.Style{
@@ -87,13 +87,13 @@ func generateBarChartPNGFromPSCPost(data datastore.BarChartData) {
 
 func generateDataAndChart() {
 	// Sample bar chart data
-	barChartData := datastore.BarChartData{
+	barChartData := chartdata.BarChartData{
 		Labels: []string{"US", "China", "Ukraine", "EU", "Russia"},
 		Values: []float64{23.0, 17.7, 0.2, 17.1, 1.7}, // GDP in Trillions (made up numbers
 	}
 
 	// Create a PSCPost with the bar chart data
-	pscPost := datastore.PSCPost{
+	pscPost := chartdata.PSCPost{
 		ChartPostID: "20240701-001",
 		XPostURL:    "https://x.com/example", // Placeholder
 		ChartData:   barChartData,

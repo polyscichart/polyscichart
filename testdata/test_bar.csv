@@ -10,5 +10,6 @@ chart_alt,"Bar chart of US unemployment rates in 2024: Q1 3.8%, Q2 4.0%",,
 style,"bgcolor=#f5f5f5","color=#4682b4",
 +++
 ---
-Quarter,Q1,Q2
-Rate,3.8,4.0
+Quarter,Rate
+Q1,3.8
+Q2,4.0

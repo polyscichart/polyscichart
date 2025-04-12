@@ -1,5 +1,5 @@
 Key,Value1,Value2,ValueN
-x_title,"Income Inequality",,
+x_title,"Federal Taxes Collected by State (2023)",,
 x_text,"Top 3 states account for 80% #Economy",,
 x_sponsor,"",,
 x_source,"Census",,
@@ -10,5 +10,25 @@ chart_alt,"Pareto chart of income distribution: CA 50M, NY 30M, TX 20M",,
 style,"bgcolor=#f0f0f0","color=#2e8b57",,
 +++
 ---
-State,CA,NY,TX
-Income,50,30,20
+State,Style,Tax ($B),%Total,Cumulative %
+California,color=steelblue,450.1,20.7,20.7
+Other,color=gray,232.4,10.7,31.4
+New York,color=steelblue,225.3,10.4,41.8
+Texas,color=steelblue,179.7,8.3,50.1
+Florida,color=steelblue,135.1,6.2,56.3
+Illinois,color=steelblue,101.9,4.7,61.0
+Pennsylvania,color=steelblue,90.3,4.2,65.2
+New Jersey,color=steelblue,86.2,4.0,69.2
+Massachusetts,color=steelblue,79.4,3.6,72.8
+Virginia,color=steelblue,67.9,3.1,75.9
+Washington,color=steelblue,63.4,2.9,78.8
+Georgia,color=steelblue,58.9,2.7,81.5
+Michigan,color=steelblue,56.6,2.6,84.1
+North Carolina,color=steelblue,54.4,2.5,86.6
+Ohio,color=steelblue,52.1,2.4,89.0
+Maryland,color=steelblue,49.9,2.3,91.3
+Colorado,color=steelblue,43.5,2.0,93.3
+Minnesota,color=steelblue,40.8,1.9,95.2
+Arizona,color=steelblue,36.7,1.7,96.9
+Wisconsin,color=steelblue,34.8,1.6,98.5
+Connecticut,color=steelblue,32.7,1.5,100.0
